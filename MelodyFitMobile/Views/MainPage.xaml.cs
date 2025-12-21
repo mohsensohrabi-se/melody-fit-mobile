@@ -1,4 +1,4 @@
-﻿namespace MelodyFitMobile
+﻿namespace MelodyFitMobile.Views
 {
     public partial class MainPage : ContentPage
     {
