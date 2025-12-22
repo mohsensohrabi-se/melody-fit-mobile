@@ -10,7 +10,9 @@
     <Color x:Key="PrimaryDark">#1565C0</Color>
     <Color x:Key="Accent">#E91E63</Color>
     <Color x:Key="AccentSoft">#F8BBD0</Color>
-    
+    <Color x:Key="Secondary">#64B5F6</Color>
+  
+
     <!-- Fitness Feedback -->
     <Color x:Key="Success">#2ECC71</Color>
     <Color x:Key="Warning">#F39C12</Color>
@@ -37,10 +39,12 @@
     <Color x:Key="Gray100">#F5F5F5</Color>
     <Color x:Key="Gray200">#EEEEEE</Color>
     <Color x:Key="Gray300">#D6D6D6</Color>
+    <Color x:Key="Gray400">#BDBDBD</Color>
     <Color x:Key="Gray500">#9E9E9E</Color>
     <Color x:Key="Gray600">#757575</Color>
     <Color x:Key="Gray900">#212121</Color>
-    
+    <Color x:Key="Gray950">#0F0F0F</Color>
+
     <!-- Brushes -->
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="BackgroundBrush" Color="{AppThemeBinding 
