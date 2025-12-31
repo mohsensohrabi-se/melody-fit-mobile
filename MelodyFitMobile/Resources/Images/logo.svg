@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1024"
+     height="1024"
+     viewBox="0 0 1024 1024">
+
+  <!-- Outer Ring -->
+  <circle cx="512" cy="512" r="300"
+          fill="none"
+          stroke="white"
+          stroke-width="48"/>
+
+  <!-- Music Wave -->
+  <path d="
+    M 212 512
+    C 262 412, 312 612, 362 512
+    C 412 412, 462 612, 512 512
+    C 562 412, 612 612, 662 512
+    C 712 412, 762 612, 812 512
+  "
+  fill="none"
+  stroke="#E91E63"
+  stroke-width="40"
+  stroke-linecap="round"/>
+
+</svg>

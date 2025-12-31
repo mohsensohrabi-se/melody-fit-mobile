@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MelodyFitMobile.Views.SignUpPage"
+             Title="Sign Up">
+    <ScrollView>
+        <Grid Padding="24">
+            <Border
+                Padding="24"
+                StrokeThickness="0"
+                BackgroundColor="{AppThemeBinding Light={StaticResource White},
+                                                   Dark={StaticResource SurfaceDark}}"
+                >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="24"/>
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow Radius="20" Opacity="0.2" Offset="0,8"/>
+                </Border.Shadow>
+
+                <VerticalStackLayout
+                    Spacing="20">
+                    <!-- Header -->
+                    <Label 
+                        Text="Create Account"
+                        Style="{StaticResource Headline}"/>
+                    <Label
+                        Text="Start your fitness journey with music that moves you"
+                        TextColor="{AppThemeBinding Light={StaticResource TextSecondaryLight},
+                                                    Dark={StaticResource TextSecondaryDark}}"
+                        
+                        />
+                    
+                    <!-- Credentials -->
+                    <Entry Placeholder="Email" Text="{Binding Email}"/>
+                    <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+                    
+                    <!-- Personal Info -->
+                    <Grid ColumnDefinitions="*,*">
+                        <Entry Placeholder="First Name" Grid.Column="0" Text="{Binding FirstName}"/>
+                        <Entry Placeholder="Last Name" Grid.Column="1" Text="{Binding LastName}"/>
+                    </Grid>
+
+                    <DatePicker Date="{Binding BirthDateValue}"/>
+                    
+                    <!-- Body Metrics-->
+                    <Picker Title="Gender" SelectedItem="{Binding Gender,Mode=TwoWay}">
+                        <Picker.Items>
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Grid ColumnDefinitions="*,*">
+                        <Entry Placeholder="Weight (kg)" Keyboard="Numeric" Grid.Column="0" Text="{Binding WeightKgText}"/>
+                        <Entry Placeholder="Height (cm)" Keyboard="Numeric" Grid.Column="1" Text="{Binding HeightCmText}"/>
+                    </Grid>
+                    
+                    <!-- Action -->
+                    <Button
+                        Text="Register"
+                        Command="{Binding RegisterCommand}"
+                        
+                        />
+
+                    <ActivityIndicator
+                        IsRunning="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        HorizontalOptions="Center" />
+
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+    </ScrollView>
+</ContentPage>
